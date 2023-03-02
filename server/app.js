@@ -21,6 +21,7 @@ let products = [
 
 const app = express();
 const port = 4001;
+let id = 0;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -54,10 +55,11 @@ app.get("/products/:id", (req, res) => {
 
 app.post("/products", (req, res) => {
   products.push({
-    id: products[products.length - 1].id + 1,
+    id: id,
     ...req.body,
   });
-
+  id++;
+  console.log(products);
   return res.json({
     message: "Product has been created.",
   });
