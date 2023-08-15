@@ -21,7 +21,7 @@ let products = [
 
 const app = express();
 const port = 4001;
-let id = 0;
+let id = 3;
 
 app.use(cors());
 app.use(bodyParser.json());
