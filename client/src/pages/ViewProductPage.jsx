@@ -29,7 +29,7 @@ function ViewProductPage() {
       <h1>View Product Page</h1>
       <div className="view-product-container">
         <h1>Name : {product.name}</h1>
-        <img src={product.im}/>
+        <img src={product.image}/>
         <h2>{product.price} THB</h2>
         <p>{product.description}</p>
       </div>
